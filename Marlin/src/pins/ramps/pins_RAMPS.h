@@ -258,7 +258,7 @@
 #endif
 
 #ifndef PS_ON_PIN
-  #define PS_ON_PIN                           12
+  #define PS_ON_PIN                           19 // PS_ON_PIN: 12 Z_MAX-PIN: 19
 #endif
 
 #if ENABLED(CASE_LIGHT_ENABLE) && !defined(CASE_LIGHT_PIN) && !defined(SPINDLE_LASER_ENA_PIN)
@@ -590,7 +590,7 @@
       #define BEEPER_PIN                      23
       #define LCD_BACKLIGHT_PIN               33
 
-      #define BTN_EN1                         35
+      #define BTN_EN1                         35  // swap EN1 and EN2 to alter the selector direction behavior
       #define BTN_EN2                         37
       #define BTN_ENC                         31
 
