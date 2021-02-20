@@ -120,7 +120,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 256000
+#define BAUDRATE 115200
 
 // Enable the Bluetooth serial interface on AT90USB devices
 //#define BLUETOOTH
@@ -325,14 +325,14 @@
  * Enable and connect the power supply to the PS_ON_PIN.
  * Specify whether the power supply is active HIGH or active LOW.
  */
-//#define PSU_CONTROL
-//#define PSU_NAME "Power Supply"
+#define PSU_CONTROL
+#define PSU_NAME "Power Supply with modified Sonoff"
 
 #if ENABLED(PSU_CONTROL)
-  #define PSU_ACTIVE_STATE HIGH      // Set 'LOW' for ATX, 'HIGH' for X-Box
+  #define PSU_ACTIVE_STATE LOW      // Set 'LOW' for ATX, 'HIGH' for X-Box
 
-  //#define PSU_DEFAULT_OFF         // Keep power off until enabled directly with M80
-  //#define PSU_POWERUP_DELAY 250   // (ms) Delay for the PSU to warm up to full power
+  #define PSU_DEFAULT_OFF         // Keep power off until enabled directly with M80
+  #define PSU_POWERUP_DELAY 250   // (ms) Delay for the PSU to warm up to full power
 
   //#define AUTO_POWER_CONTROL      // Enable automatic control of the PS_ON pin
   #if ENABLED(AUTO_POWER_CONTROL)
